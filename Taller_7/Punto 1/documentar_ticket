@@ -1,0 +1,44 @@
+---
+name: documentar-ticket
+description: Documenta un ticket de trabajo completo (contexto, alcance, criterios de aceptación, pasos). Úsala cuando se pida crear, redactar o desglosar un ticket o tarea.
+---
+
+# Documentar ticket
+
+Inspirada en `/to-tickets`: cada ticket es una **rebanada vertical** (tracer bullet) que se puede implementar y verificar sola.
+
+## Proceso
+1. Reúne contexto: pide o lee la spec/requerimiento y explora el código afectado. Pregunta solo lo imprescindible.
+2. Si el trabajo es grande, divídelo en tickets pequeños e independientes, ordenados por dependencia.
+3. Escribe cada ticket con la plantilla.
+4. Revisa: ¿alguien sin contexto podría implementarlo sin preguntar?
+
+## Plantilla
+```md
+# [ID] Título accionable (verbo + resultado)
+
+## Contexto
+Por qué existe: problema, usuario o necesidad.
+
+## Alcance
+- Incluye: ...
+- No incluye: ...
+
+## Descripción del trabajo
+Qué debe hacerse, en lenguaje de comportamiento. Menciona módulos/archivos relevantes, no líneas de código.
+
+## Criterios de aceptación
+- [ ] Dado ... cuando ... entonces ...
+
+## Pruebas esperadas
+Casos a cubrir (feliz, bordes, errores).
+
+## Dependencias y riesgos
+Bloqueado por / bloquea / supuestos abiertos.
+```
+
+## Reglas
+- Un ticket = un resultado verificable. Sin tareas vagas.
+- Criterios medibles; evita "mejorar", "optimizar" sin métrica.
+- Usa el vocabulario del dominio del proyecto.
+- Guarda como `.md` o publícalo en el gestor de issues del proyecto si existe.
